@@ -280,6 +280,13 @@ span {
 .coins {
   margin-top: 2rem;
 
+  input,
+  button {
+    padding: 0.8rem;
+    font-family: inherit;
+    font-size: 1.4rem;
+  }
+
   h2 {
     font-size: 3rem;
   }
@@ -295,7 +302,7 @@ span {
   padding: 3rem;
 
   img {
-    width: 10%;
+    width: 15%;
     margin: 1rem;
   }
 }
