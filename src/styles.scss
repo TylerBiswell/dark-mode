@@ -152,6 +152,12 @@ h4 {
   font-size: 1.4rem;
 }
 
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  padding-bottom: 1rem;
+}
+
 img {
   height: auto;
   width: 100%;
@@ -229,8 +235,8 @@ img {
 .coin__title {
   display: block;
   margin-left: 8px;
-    min-width: 160px;
-text-align: left;
+  min-width: 160px;
+  text-align: left;
 }
 
 .coin__symbol {
@@ -247,7 +253,64 @@ text-align: left;
   background-color: #313843;
 
   .navbar {
-    background-color: #1F2022;
+    background-color: #1f2022;
     border: none;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+.home-page {
+  margin-top: 4rem;
+
+  h2 {
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+}
+
+span {
+  color: #f68819;
+}
+
+.coins {
+  margin-top: 2rem;
+
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+.coin {
+  background-color: white;
+  width: 90%;
+  max-width: 300px;
+  margin: 4rem auto;
+  border-radius: 1rem;
+  color: black;
+  padding: 3rem;
+
+  img {
+    width: 10%;
+    margin: 1rem;
+  }
+}
+
+.symbol {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+a {
+  // color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: #f68819;
   }
 }

@@ -17,6 +17,9 @@ const Navbar = () => {
       <NavLink to='/charts'>
         <h2>Charts</h2>
       </NavLink>
+      <NavLink to='/coins'>
+        <h2>Coins</h2>
+      </NavLink>
       <div className='dark-mode__toggle'>
         <div
           onClick={toggleMode}

@@ -6,11 +6,13 @@ import axios from 'axios';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Charts from './components/Charts';
+import Coins from './components/Coins';
 
 import './styles.scss';
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
+  const [globalData, setGlobalData] = useState([]);
 
   useEffect(() => {
     axios
@@ -19,16 +21,26 @@ const App = () => {
       )
       .then(res => setCoinData(res.data))
       .catch(err => console.log(err));
+      
+    axios
+    .get('https://api.coingecko.com/api/v3/global')
+    .then(res => setGlobalData(res.data))
+    .catch(err => console.log(err));
   }, []);
 
   return (
     <div className='App'>
       <Navbar />
-      <Route exact path='/' component={Home} />
+      <Route
+        exact
+        path='/'
+        render={props => <Home {...props} data={globalData.data} />}
+      />
       <Route
         path='/charts'
         render={props => <Charts {...props} coinData={coinData} />}
       />
+      <Route path='/coins' render={props => <Coins {...props} />} />
     </div>
   );
 };
